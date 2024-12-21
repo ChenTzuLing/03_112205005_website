@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <meta charsct="utf-8"> <!--比較不會有亂碼-->
+        <title>3_財政二_陳子玲</title>
+    </head>
+    <style>
+body{
+  background-color:#CCB9FF;
+  font-family:'微軟正黑體';
+  margin-top: 80px;
+}
+.content{
+  background-color:#A660A7;
+  margin-bottom: 15px;
+  color:black;
+  text-align: center;
+  padding: 20px;
+  }
+.content1{
+  background-color:#D4AF37;
+  margin-bottom: 15px;
+  color:black;
+  text-align: center;
+  padding: 20px;
+}
+.content2{
+  background-color:#960018;
+  margin-bottom: 15px;
+  color:white;
+  text-align: center;
+  padding: 20px;
+}
+.content3{
+  background-color:#C3552B;
+  margin-bottom: 15px;
+  color:white;
+  text-align: center;
+  padding: 20px;
+}
+.content4{
+  background-color:#348EC7;
+  margin-bottom: 15px;
+  color:black;
+  text-align: center;
+  padding: 20px;
+}
+.header-with-border {
+  text-align: center; /* 文字置中 */
+  border-bottom: 2px solid black; /* 底部邊框 */
+  padding-bottom: 10px; /* 邊框和文字的間距 */
+  justify-content: space-between;
+}
+.clock-container {
+  top: 10;
+  right: 20px; /* 距離右側 20px */
+  padding: 10px 20px;
+  background-color: #333; /* 深色背景 */
+  color: #fff; /* 文字顏色為白色 */
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  border-radius: 15px;
+  z-index: 1000; /* 保證在內容之上 */
+  text-align: center;
+}
+nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: white;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: white;
+      color: #000; /* 初始文字顏色為黑色 */
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: color 0.3s ease; /* 平滑變化效果 */
+    }
+    
+    button:hover {
+      color: gray; 
+    }
+    html {
+    scroll-behavior: smooth;
+}
+</style>
+    <script>
+function changeBlack(){
+	document.getElementById('text1').style.color='black'
+}
+function changeWhite(){
+	document.getElementById('text1').style.color='white'
+}
+function hide(){
+	document.getElementById('text1').style.display='none'
+}
+function show(){
+	document.getElementById('text1').style.display='block'
+}
+function updateClock() {
+      const clockElement = document.getElementById('clock');
+      const now = new Date();
+
+      // 格式化時間：時:分:秒
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+
+      // 顯示時間
+      clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+}
+    // 每秒更新時鐘
+    setInterval(updateClock, 1000);
+
+    // 初始調用，避免等待1秒才顯示
+    updateClock();
+</script>
+    <body>
+      <nav>
+        <button onclick="location.href='#intro'">自我介紹</button>
+        <button onclick="location.href='#about'">興趣/作品集</button>
+        <button onclick="location.href='#contact'">聯絡我</button>
+      </nav>
+        <div class="content" id="intro" >
+            <h1 class="header-with-border">自我介紹</h1>
+            <p>大家好我是財政二的陳子玲，為了讓你更認識我，接下來請好好閱讀(⁎⁍̴̛ᴗ⁍̴̛⁎)</p>
+         </div>
+         <div class="content1" >
+          <h1 class="header-with-border">按鈕互動</h1>
+          <button type="button" onclick="changeBlack()">按鈕-black</button>
+            <button type="button" onclick="changeWhite()">按鈕-white</button>
+            <button type="button" onclick="hide()">消失</button>
+            <button type="button" onclick="show()">顯示</button>
+        </div>
+        <div class="content2" id="text1">
+          <h1 class="header-with-border">選課原因</h1>
+          <p>之前看室友使用adobe系列覺得很有趣，所以也想要系統性的學習。希望這學期可以收穫滿滿！</p>
+        </div>
+         <div class="content3" id="about">
+            <h1 class="header-with-border">興趣</h1>
+            <P>興趣是看漫畫、小說、追V（彩虹社EN的男人們大多都有看），</P>
+            <p>之前有空閒也會創作（新詩小說畫圖），但大學好忙都沒時間好難過QQ，但還是跟大家分享我寫過的東西</p>
+            <h1 class="header-with-border">一點創作分享</h1>
+            <a href="https://www.instagram.com/lapis.lazuli_5?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <img src="https://i.ibb.co/QnQ4h3T/lapis-lazuli-5-qr.png" style="width:200px;height:200px">
+            </a>
+        </div>
+        <div class="content4" id="contact">
+          <h1 class="header-with-border">聯絡我</h1>
+          <a href="https://www.instagram.com/ling_930923/" target="_blank">
+              <img src="https://i.ibb.co/Fz7CBg3/ling-930923-qr.png" style="width:200px;height:200px">
+          </a>
+          <p> </p>
+          <div class="clock-container" id="clock">
+            Loading...
+          </div>
+        </div>
+    </body>
+</html>
